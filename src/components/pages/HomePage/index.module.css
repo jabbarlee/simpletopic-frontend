@@ -1,0 +1,11 @@
+.homePageWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  padding: 100px;
+}
+
+.title {
+  font-size: 120px;
+  font-weight: 400;
+}
