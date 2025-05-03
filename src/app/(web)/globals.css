@@ -1,3 +1,63 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --brand-green: #58935d;
+}
+
+.landingBg {
+  position: relative;
+  overflow: hidden; /* clip the pseudo‑layer */
+}
+
+.landingBg::before {
+  content: "";
+  position: fixed; /* stick to the viewport */
+  inset: 0; /* full‑screen size       */
+  z-index: -1; /* sit behind page content */
+
+  background: radial-gradient(
+      at 85% 15%,
+      /* top‑right-ish spot   */ rgba(var(--brand-green-rgb, 88, 147, 93), 0.2)
+        0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      at 10% 80%,
+      rgba(var(--brand-green-rgb, 88, 147, 93), 0.12) 0%,
+      transparent 60%
+    ),
+    linear-gradient(125deg, #ffffff 0%, #f6f8f6 50%, #ffffff 100%);
+
+  background-size: 400% 400%; /* lets us pan the base   */
+  animation: bgShift 18s ease-in-out infinite, huePulse 12s ease-in-out infinite;
+}
+
+@keyframes bgShift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* gentle 8‑degree hue rotation = almost imperceptible    */
+@keyframes huePulse {
+  0%,
+  100% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(-8deg);
+  }
+}
+
+/* Optional: make the green easier to override in one place */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand-green: #6bb46f;
+  } /* slightly brighter in dark mode */
+}
