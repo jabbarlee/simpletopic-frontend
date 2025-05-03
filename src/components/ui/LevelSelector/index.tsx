@@ -3,6 +3,8 @@ type Props = {
   onChange: (val: string) => void;
 };
 
+import styles from './index.module.css'
+
 export default function LevelSelector({ selected, onChange }: Props) {
   const options = [
     { label: "5 year old", value: "5yo" },
@@ -11,20 +13,16 @@ export default function LevelSelector({ selected, onChange }: Props) {
   ];
 
   return (
-    <div className="space-y-3">
+    <div className={styles.wrapper}>
       {options.map((opt) => (
-        <label
-          key={opt.value}
-          className="flex items-center gap-3 text-lg leading-none"
-        >
+        <label key={opt.value} className={styles.selection}>
           <input
             type="radio"
             value={opt.value}
             checked={selected === opt.value}
             onChange={() => onChange(opt.value)}
-            className="h-5 w-5 accent-[#58935D] cursor-pointer"
           />
-          <span className="cursor-pointer select-none">{opt.label}</span>
+          <p className={styles.label}>{opt.label}</p>
         </label>
       ))}
     </div>

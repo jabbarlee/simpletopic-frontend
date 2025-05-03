@@ -1,0 +1,53 @@
+.formWrapper {
+  background: #f8f8f8;
+  border: 1px solid #d9d9d9;
+  border-radius: 30px;
+  padding: 25px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column; /* stack children vertically   */
+  gap: 24px; /* space between children       */
+  width: 100%; /* fill the right-side column   */
+  max-width: 100%; /* never exceed its container   */
+}
+
+.textarea {
+  flex: 1 1 auto; /* grow/shrink but stay inside  */
+  width: 100%;
+  min-height: 180px; /* keeps a pleasant initial size*/
+  padding: 20px;
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  resize: none;
+  box-sizing: border-box;
+}
+
+.levelSelectorWrapper label {
+  font-size: 22px;
+}
+
+.button {
+  width: 100%;
+  padding: 16px 0;
+  font-size: 18px;
+  color: #fff;
+  background: #58935d;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #4c7e50;
+}
+
+.title {
+  color: #3c3c3c;
+  font-weight: 450;
+}
+
+.levelSelectorWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

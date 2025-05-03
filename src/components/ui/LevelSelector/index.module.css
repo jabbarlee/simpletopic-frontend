@@ -1,0 +1,17 @@
+.label {
+  font-size: 18px;
+  color: #5b5b5b;
+  margin: 0;
+}
+
+.selection {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.wrapper {
+  display: flex;
+  gap: 15px;
+  flex-direction: row;
+}
