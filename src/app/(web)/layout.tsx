@@ -15,9 +15,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className={`${inria.variable} landingBg`}>
         <Navbar />
-        <div className={`${inria.variable} landingBg`}>{children}</div>
+        {children}
       </body>
     </html>
   );

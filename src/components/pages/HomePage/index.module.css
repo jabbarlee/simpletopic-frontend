@@ -1,7 +1,7 @@
 /* ---------- shell layout ---------- */
 .homePageWrapper {
   display: flex;
-  width: 100vw;
+  width: 100%;
   height: calc(100vh - 80px);
   gap: 50px;
   padding: 0 100px; /* match the Figma gutters */
@@ -17,7 +17,19 @@
 }
 
 .title {
-  font-size: 110px;
-  font-weight: 400;
-  line-height: 1.27; /* 140 px on a 110 px font-size */
+  font-family: "Inria Serif", serif;
+  font-size: 100px;
+  line-height: 1.3;
+  font-weight: 550;
+  color: #1a1a1a; /* softer than pure black */
+  letter-spacing: -0.5px;
+  text-align: left;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 58px;
+    line-height: 1.25;
+  }
 }
