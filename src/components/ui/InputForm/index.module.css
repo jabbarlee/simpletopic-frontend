@@ -14,7 +14,7 @@
 .textarea {
   flex: 1 1 auto; /* grow/shrink but stay inside  */
   width: 100%;
-  min-height: 180px; /* keeps a pleasant initial size*/
+  min-height: 250px; /* keeps a pleasant initial size*/
   padding: 15px;
   border: 1px solid #d9d9d9;
   border-radius: 15px;

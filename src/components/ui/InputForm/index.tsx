@@ -2,12 +2,6 @@
 
 import styles from "./index.module.css";
 import LevelSelector from "../LevelSelector";
-import { Inter } from "next/font/google";
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-});
 
 export default function InputForm() {
   const level = "5-year-old";

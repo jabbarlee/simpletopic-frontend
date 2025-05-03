@@ -1,5 +1,6 @@
 import { Inria_Serif } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/ui/Navbar";
 
 const inria = Inria_Serif({
   subsets: ["latin"],
@@ -14,9 +15,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      {/* full-width white background & global serif */}
-      <body className={`${inria.variable} font-[var(--font-inria)] bg-white`}>
-        {children}
+      <body>
+        <Navbar />
+        <div className={inria.variable}>{children}</div>
       </body>
     </html>
   );

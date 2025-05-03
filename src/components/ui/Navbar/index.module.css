@@ -1,0 +1,75 @@
+/* ---------- top bar ---------- */
+.navbar {
+  width: 100%;
+  height: 80px;
+  padding: 0 100px; /* matches the page gutters */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+
+/* ---------- brand ---------- */
+.brand {
+  font-size: 30px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #000000;
+  letter-spacing: -0.4px;
+}
+
+/* ---------- nav links ---------- */
+.navLinks {
+  display: flex;
+  gap: 40px;
+}
+
+.link {
+  font-size: 18px;
+  text-decoration: none;
+  color: #000000;
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  color: #58935d;
+}
+
+/* ---------- CTA button ---------- */
+.cta {
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 18px;
+  background: #58935d;
+  color: #ffffff;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.cta:hover {
+  background: #4c7e50;
+}
+
+/* ---------- responsiveness ---------- */
+@media (max-width: 991px) {
+  .navbar {
+    padding: 0 40px;
+  }
+
+  .navLinks {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 24px;
+  }
+
+  /* collapse links for now; swap for burger menu later if needed */
+  .navLinks {
+    display: none;
+  }
+}

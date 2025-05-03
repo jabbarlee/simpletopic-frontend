@@ -2,9 +2,9 @@
 .homePageWrapper {
   display: flex;
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 80px);
   gap: 50px;
-  padding: 0 100px;          /* match the Figma gutters */
+  padding: 0 100px; /* match the Figma gutters */
   box-sizing: border-box;
 }
 
@@ -19,5 +19,5 @@
 .title {
   font-size: 110px;
   font-weight: 400;
-  line-height: 1.27;         /* 140 px on a 110 px font-size */
+  line-height: 1.27; /* 140 px on a 110 px font-size */
 }
