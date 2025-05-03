@@ -6,6 +6,11 @@
   --brand-green: #58935d;
 }
 
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .landingBg {
   position: relative;
   overflow: hidden; /* clip the pseudo‑layer */
