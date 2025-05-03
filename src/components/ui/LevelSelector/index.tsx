@@ -3,11 +3,11 @@ type Props = {
   onChange: (val: string) => void;
 };
 
-import styles from './index.module.css'
+import styles from "./index.module.css";
 
 export default function LevelSelector({ selected, onChange }: Props) {
   const options = [
-    { label: "5 year old", value: "5yo" },
+    { label: "5-year-old", value: "5yo" },
     { label: "Teenager", value: "teen" },
     { label: "Professional", value: "pro" },
   ];
