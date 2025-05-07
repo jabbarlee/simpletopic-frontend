@@ -1,0 +1,76 @@
+/* ========== WRAPPER ========== */
+.wrapper {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  gap: 50px;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    flex-direction: column;
+    padding: 0 40px;
+    gap: 32px;
+    height: auto;
+  }
+}
+
+.leftPane {
+  flex: 1 1 50%;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #e1e1e1;
+  border-radius: 16px;
+  padding: 36px;
+  box-sizing: border-box;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* fill parent (which is full screen) */
+  overflow: hidden; /* don't let outer scroll */
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 4px;
+  flex-shrink: 0;
+}
+
+/* this handles scroll inside fixed-height panel */
+.explainedText {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  color: #333;
+  width: 100%;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.rightPane {
+  flex: 1 1 50%;
+  padding: 36px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* fill parent (which is full screen) */
+  overflow: auto; /* don't let outer scroll */
+}
+
+.originalText {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  color: #444;
+  margin: 0;
+}

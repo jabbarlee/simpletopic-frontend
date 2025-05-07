@@ -3,9 +3,7 @@
 import React, { useState } from "react";
 import styles from "./index.module.css";
 import LevelSelector from "../LevelSelector";
-import { Button, Input, Tag } from "antd";
-
-const { TextArea } = Input;
+import { useRouter } from "next/navigation";
 
 export default function InputForm() {
   const [levelSelected, setLevelSelected] = useState<string>("5-year-old");
@@ -14,6 +12,7 @@ export default function InputForm() {
   const [alertColor, setAlertColor] = useState<"green" | "red" | "blue">(
     "green"
   );
+  const router = useRouter();
 
   const setLevel = (level: string) => {
     setLevelSelected(level);
@@ -36,10 +35,7 @@ export default function InputForm() {
       setAlertColor("green"); // Green for success
     }, 2000);
 
-    console.log({
-      text: paragraph,
-      level: levelSelected,
-    });
+    router.push("/result");
   };
 
   return (
